@@ -1,12 +1,24 @@
 package com.jc_gomis.cards.dtos;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
+@Schema(
+        name = "Response",
+        description = "Schema to hold successfully response information"
+
+)
 public class ResponseDto {
+    @Schema(
+            description = "Status code in the response"
+    )
     private  String statusCode;
+    @Schema(
+            description = "Status codee in the response"
+    )
 
     private String statusMsg;
 }
